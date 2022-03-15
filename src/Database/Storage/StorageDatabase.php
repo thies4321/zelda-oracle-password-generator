@@ -9,6 +9,8 @@ use Zopg\Exception\Database\QueryFieldNotProvided;
 use Zopg\Exception\Database\StorageClassNotFound;
 use Zopg\Model\Database\DatabaseDriver;
 use function class_exists;
+use function print_r;
+use function var_dump;
 
 final class StorageDatabase implements DatabaseDriver
 {
