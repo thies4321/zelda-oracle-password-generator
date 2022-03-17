@@ -9,15 +9,15 @@ use Zopg\Storage\Animal as AnimalStorage;
 
 final class Animal extends AbstractAnimal implements AnimalInterface
 {
-    public function __construct(int $identifier, string $name)
+    public function __construct(string $name, string $value)
     {
-        $this->identifier = $identifier;
         $this->name = $name;
+        $this->value = $value;
     }
 
     public static function fromArray(array $animal)
     {
-        $identifier = $animal[AnimalStorage::FIELD_IDENTIFIER] ?? 0;
+        $identifier = $animal[AnimalStorage::FIELD_VALUE] ?? 0;
         $name = $animal[AnimalStorage::FIELD_NAME] ?? '';
 
         return new self($identifier, $name);

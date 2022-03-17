@@ -19,12 +19,12 @@ final class StorageAnimalRepository extends AbstractRepository implements Animal
      * @throws QueryFieldNotProvided
      * @throws StorageClassNotFound
      */
-    public function getByIdentifier(int $identifier): ?Animal
+    public function getByName(string $name): ?Animal
     {
         $data = $this->databaseDriver->fetchOne([
             'class' => AnimalStorage::class,
-            'field' => AnimalStorage::FIELD_IDENTIFIER,
-            'value' => $identifier
+            'field' => AnimalStorage::FIELD_NAME,
+            'value' => $name
         ]);
 
         if (empty($data)) {
@@ -34,17 +34,12 @@ final class StorageAnimalRepository extends AbstractRepository implements Animal
         return Animal\Animal::fromArray($data);
     }
 
-    /**
-     * @throws FieldNotFound
-     * @throws QueryFieldNotProvided
-     * @throws StorageClassNotFound
-     */
-    public function getByName(string $name): ?Animal
+    public function getByValue(string $value): ?Animal
     {
         $data = $this->databaseDriver->fetchOne([
             'class' => AnimalStorage::class,
-            'field' => AnimalStorage::FIELD_NAME,
-            'value' => $name
+            'field' => AnimalStorage::FIELD_VALUE,
+            'value' => $value
         ]);
 
         if (empty($data)) {

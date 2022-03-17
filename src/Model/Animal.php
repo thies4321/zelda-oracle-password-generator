@@ -6,7 +6,7 @@ namespace Zopg\Model;
 
 interface Animal
 {
-    public function getIdentifier(): int;
-
     public function getName(): string;
+
+    public function getValue(): string;
 }

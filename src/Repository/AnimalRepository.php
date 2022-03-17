@@ -8,7 +8,7 @@ use Zopg\Model\Animal;
 
 interface AnimalRepository
 {
-    public function getByIdentifier(int $identifier): ?Animal;
-
     public function getByName(string $name): ?Animal;
+
+    public function getByValue(string $value): ?Animal;
 }

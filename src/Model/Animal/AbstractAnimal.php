@@ -8,17 +8,17 @@ use Zopg\Model\Animal;
 
 abstract class AbstractAnimal implements Animal
 {
-    protected int $identifier;
-
     protected string $name;
 
-    public function getIdentifier(): int
-    {
-        return $this->identifier;
-    }
+    protected string $value;
 
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function getValue(): string
+    {
+        return $this->value;
     }
 }
