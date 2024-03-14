@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Thies\ZeldaOraclePasswordGenerator\Enum;
 
-enum Game: int
+enum GameRegion: int
 {
-    case Ages = 0;
-    case Seasons = 1;
+    case JP = 0;
+    case US = 1;
 }

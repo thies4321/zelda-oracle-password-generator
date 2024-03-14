@@ -6,7 +6,8 @@ namespace Thies\ZeldaOraclePasswordGenerator\Enum;
 
 enum Animal: int
 {
-    case Ricky = 3;
-    case Dimitri = 4;
-    case Moosh = 5;
+    const None = 0;
+    const Ricky = 0x0b;
+    const Dimitri = 0x0c;
+    const Moosh = 0x0d;
 }
